@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Roboto+Slab:wght@100;300;400;500;600;700;800&display=swap');
 :root{
   --black:#2c2c54;
   --orange:#ff9f1a;
 }
 
 *{
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Roboto Slab', serif;
   margin: 0; padding:0;
   box-sizing: border-box;
   outline: none; border:none;
@@ -136,7 +135,7 @@ section{
   margin: 1.5rem auto 0 auto;
   padding: 12px 20px;
   border: none;
-  background: #ff9f1a;
+  background: #b10f0f;
   color: var(--bg-color);
   font-size: 1rem;
   font-weight: 500;
@@ -175,7 +174,7 @@ background: #ccc;
 
 .heading span{
   text-transform: uppercase;
-  color:var(--orange);
+  color: #b10f0f;
 }
 
 .btn{
@@ -192,7 +191,7 @@ background: #ccc;
 }
 
 .btn:hover{
-  background:var(--orange);
+  background: #b10f0f;
   color:#fff;
 }
 
@@ -220,7 +219,7 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-  color:var(--orange);
+  color:#b10f0f;
 }
 
 header .icons a{
@@ -230,7 +229,7 @@ header .icons a{
 }
 
 header .icons a:hover{
-  color:var(--orange);
+  color:#b10f0f;
 }
 
 #menu-bar{
@@ -282,13 +281,6 @@ header .icons a:hover{
   animation:shoe .3s linear;
 }
 
-@keyframes shoe{
-  0%{
-    transform: rotate(0deg) scale(.5);
-  }
-}
-
-
 
 
 .home .slide-container .slide .image .text{
@@ -298,16 +290,11 @@ header .icons a:hover{
   animation:shoeText .5s linear .5s backwards;
 }
 
-@keyframes shoeText{
-  0%{
-    opacity: 0;
-    top:-10rem;
-  }
-}
+
 
 .home .slide-container .slide .content span{
   font-size: 2rem;
-  color:var(--orange);
+  color:#b10f0f;
 }
 
 .home .slide-container .slide .content h3{
@@ -427,11 +414,14 @@ header .icons a:hover{
 }
 
 .products .box-container .box .content{
+
+  
   padding:1.5rem;
 }
 
 .products .box-container .box img{
-  height:10rem;
+  position: relative; z-index: 40;
+  height:15rem;
   filter:drop-shadow(0 .5rem 1rem rgba(0,0,0,.1));
   margin:8rem 2rem;
 }
@@ -464,7 +454,7 @@ header .icons a:hover{
 }
 
 .products .box-container .box .icons a:hover{
-  background:var(--orange);
+  background:#b10f0f;
   color:#fff;
 }
 
@@ -481,7 +471,7 @@ header .icons a:hover{
 }
 
 .products .box-container .box .content .price span{
-  color:var(--orange);
+  color:#b10f0f;
   font-size: 1.5rem;
   text-decoration: line-through;
 }
@@ -492,7 +482,7 @@ header .icons a:hover{
 
 .products .box-container .box .content .stars i{
   font-size: 1.7rem;
-  color:var(--orange);
+  color: #b10f0f;
 }
 
 .featured .row{
@@ -553,7 +543,7 @@ header .icons a:hover{
 
 .featured .row .content .stars i{
   font-size: 1.7rem;
-  color:var(--orange);
+  color:#b10f0f;
   padding:.5rem 0;
 }
 
@@ -571,7 +561,7 @@ header .icons a:hover{
 
 .featured .row .content .price span{
   font-size: 1.5rem;
-  color:var(--orange);
+  color:#b10f0f;
   text-decoration: line-through;
 }
 
@@ -610,7 +600,7 @@ header .icons a:hover{
 }
 
 .review .box-container .box .stars i{
-  color:var(--orange);
+  color:#b10f0f;
   font-size: 2rem;
 }
 
@@ -688,7 +678,7 @@ header .icons a:hover{
 }
 
 .footer .box-container .box a:hover{
-  color:var(--orange);
+  color:#b10f0f;
 }
 
 .footer .box-container .credit{
@@ -702,7 +692,7 @@ header .icons a:hover{
 }
 
 .footer .box-container .credit span{
-  color:var(--orange);
+  color:#b10f0f;
 }
 
 
