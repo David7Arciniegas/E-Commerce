@@ -1,25 +1,10 @@
-
-//Carrito
-
-
-let cartIcon = document.querySelector("#cart-icon");
+//Cart buttons selectors
+let openCart = document.querySelector("#cart-icon");
 let cart1 = document.querySelector(".cart");
-let closeCart = document.querySelector(".btn-buy");
-
-// Abrir carrito
-cartIcon.onclick = () => {
-    cart1.classList.add("active");
-};
-
-//Cerrar Carrito
-
-closeCart.onclick = () => {
-    cart1.classList.remove("active");
-};
-
-
-
-
+let closeCart = document.querySelector(".actionclose")
+let cartBox = document.querySelector(".cart");
+let cartItemsShown = document.querySelector(".item-box")
+let cartContent = document.querySelector(".item-box")
 
 
 // Cart and functions
@@ -54,9 +39,15 @@ function removeItem(id, qty = 0) {
 
 // get all the items in the cart
 function showItems() {
-    console.log('qty:', cart.length)
-    console.log(getCartTotal())
-    return cart
+    cart.forEach(function appendHTML(element) { 
+    let subelement = document.createElement("h2")
+    subelement.innerHTML =String("\n " + element.id + " " + element.price + " " + element.qty)
+    cartContent.append(subelement)
+    })
+    let subelement = document.createElement("h1")
+    cartContent.append(document.createElement("br"))
+    subelement.innerHTML = String("\n\nTOTAL " + getCartTotal() + ",  " + getCartQty() + " Elementos")
+    cartContent.append(subelement)
 }
 
 // get Total 
@@ -74,10 +65,25 @@ function getCartQty(){
 // list of html elements that are products
 let itemList = Array.from(document.querySelectorAll('.product'))
 
+// event listeners for buttons
 itemList.forEach( elt => elt.children[3].addEventListener('click', () =>{
     addItem(elt.children[0].innerText ,Number(elt.children[1].innerText.split("$")[1]))
-    showItems()
 }))
+
+// event listeners for cart buttons
+closeCart.addEventListener('click', () =>{
+    cartBox.style.visibility = "hidden"
+    cartItemsShown.innerHTML = "";
+})
+
+openCart.addEventListener('click', () =>{
+    showItems()
+    cartBox.style.visibility = "visible"
+    closeCart.onclick = () =>{
+        cartBox.style.visibility = "hidden"
+    }
+})
+
 
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
